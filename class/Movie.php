@@ -12,17 +12,54 @@ class Movie {
     //per acedere al valore
     //$pippo ->nome = 'pippo'
 
-    public function setTitle($newValue){
-        $this->title = $newValue;
+    public function getTitle(){
+        return $this-> title;
 
     }
 
-    //funzione constructore
- /*     function __construct($_annoUscita){
+    public function setTitle($newTitle){
 
-        $this->annoUscita = $_annoUscita;
-    }  */
+        //per verificare che il dato inserito esista
+        if (empty($newTitle)){
+            return;
+        }
 
+        $this->title = $newTitle;
+
+    }
+
+    public function getAnnoUscita(){
+       
+        return $this-> annoUscita;
+
+    }
+
+    public function setAnnoUscita($newAnnoUscita){
+        //controllo che non sia una stringa
+        if (is_string($newAnnoUscita)){
+            return;
+        }
+        $this->annoUscita = $newAnnoUscita;
+
+    }
+
+    
+    public function getGenere(){
+        return $this-> genere;
+
+    }
+
+    public function setGenere($newGenere){
+        $this->genere = $newGenere;
+
+    }
+
+   /*  //funzione constructore
+      function __construct($_title, $annoUscita){
+
+       // $this->annoUscita = $_title;
+    }  
+ */
 
     //concatenazioni delle due variabili
     public function getFullInfo(){
@@ -31,15 +68,6 @@ class Movie {
 
    
 
-    public function setAnnoUscita($_annoUscita){
-
-        $this->annoUscita = $_annoUscita;
-    }
-
-    
-    public function getAnnoUscita(){
-        return $this->annoUscita;
-    }
 }
 
 //inocata la funzione _construct

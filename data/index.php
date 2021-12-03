@@ -14,22 +14,13 @@
 //istanza della classe
  $movie = new Movie(2007);
  $movie-> setTitle('nome film');
- //$movie->getTitle();
- //$movie->getAnnoUscita('1998');
  $movie->setAnnoUscita('1998');
- //$movie-> setTitle('nome film 2');
- //$movie->setAnnoUscita('2005');
-
 var_dump($movie);
 
 
-
-/* $film1 = new Movie(2007);
-echo $film1 -> annoUscita ;"<br>"; */
-
 $movie2 = new Movie();
 $movie2-> setTitle(' secondo film');
-$movie2 -> setAnnoUscita =('1950');
+$movie2 -> setAnnoUscita('1950');
 
 var_dump($movie2);
 
@@ -45,8 +36,21 @@ $movie0->annoUscita ='2020 ';
 $movie0->genere=' Per famiglie/Commedia ';
 echo $movie0->getFullInfo();
 
-$movie0 = new Movie();
-$movie0->title ='Interstellar ';
-$movie0->annoUscita ='2014  ';
-$movie0->genere='  Sci-fi/Avventura';
-echo $movie0->getFullInfo();
+$movie3 = new Movie();
+$movie3->title ='Interstellar ';
+$movie3->annoUscita ='2014  ';
+$movie3->genere='  Sci-fi/Avventura';
+echo $movie3->getFullInfo();
+
+
+
+//modo più corretto di invocare un dato
+$movie4 = new Movie();
+$movie4->setTitle ('Skyfall ');
+$movie4->SetAnnoUscita('2012');
+$movie4->SetGenere('  Azione/Avventura');
+echo $movie4->getTitle();
+echo $movie4->getAnnoUscita();
+echo $movie4->getGenere();
+
+
