@@ -7,6 +7,7 @@ class Movie {
     
     public $title;
     public $annoUscita;
+    public $genere;
 
     //per acedere al valore
     //$pippo ->nome = 'pippo'
@@ -21,6 +22,12 @@ class Movie {
 
         $this->annoUscita = $_annoUscita;
     }  */
+
+
+    //concatenazioni delle due variabili
+    public function getFullInfo(){
+        return $this->title . " ". $this->annoUscita . " ". $this->genere . "<br>";
+    }
 
    
 

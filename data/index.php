@@ -22,6 +22,8 @@
 
 var_dump($movie);
 
+
+
 /* $film1 = new Movie(2007);
 echo $film1 -> annoUscita ;"<br>"; */
 
@@ -30,3 +32,21 @@ $movie2-> setTitle(' secondo film');
 $movie2 -> setAnnoUscita =('1950');
 
 var_dump($movie2);
+
+$movie2->title ='Piovono polpette';
+$movie2->annoUscita ='2009';
+$movie2->genere='Per famiglie/Fantasy';
+echo $movie2->getFullInfo() ; 
+
+
+$movie0 = new Movie();
+$movie0->title ='Soul ';
+$movie0->annoUscita ='2020 ';
+$movie0->genere=' Per famiglie/Commedia ';
+echo $movie0->getFullInfo();
+
+$movie0 = new Movie();
+$movie0->title ='Interstellar ';
+$movie0->annoUscita ='2014  ';
+$movie0->genere='  Sci-fi/Avventura';
+echo $movie0->getFullInfo();
